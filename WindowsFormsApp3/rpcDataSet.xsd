@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="rpcDataSet" targetNamespace="http://tempuri.org/rpcDataSet.xsd" xmlns:mstns="http://tempuri.org/rpcDataSet.xsd" xmlns="http://tempuri.org/rpcDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="rpcConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="rpcConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp3.Properties.Settings.GlobalReference.Default.rpcConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="guinhanlieukeTableAdapter" GeneratorDataComponentClassName="guinhanlieukeTableAdapter" Name="guinhanlieuke" UserDataComponentName="guinhanlieukeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="rpcConnectionString (Settings)" DbObjectName="rpc.guinhanlieuke" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `MASO`, `NGAYNHANLK`, `DotNhan`, `SL Nhan`, `DOTPHATTIEP`, `SL Gui`, `NGAYGUILK`, `CHUAN`, `TENDONVI`, `TINH` FROM `rpc`.`guinhanlieuke`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MASO" DataSetColumn="MASO" />
+              <Mapping SourceColumn="NGAYNHANLK" DataSetColumn="NGAYNHANLK" />
+              <Mapping SourceColumn="DotNhan" DataSetColumn="DotNhan" />
+              <Mapping SourceColumn="SL Nhan" DataSetColumn="SLNhan" />
+              <Mapping SourceColumn="DOTPHATTIEP" DataSetColumn="DOTPHATTIEP" />
+              <Mapping SourceColumn="SL Gui" DataSetColumn="SLGui" />
+              <Mapping SourceColumn="NGAYGUILK" DataSetColumn="NGAYGUILK" />
+              <Mapping SourceColumn="CHUAN" DataSetColumn="CHUAN" />
+              <Mapping SourceColumn="TENDONVI" DataSetColumn="TENDONVI" />
+              <Mapping SourceColumn="TINH" DataSetColumn="TINH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="rpcDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="rpcDataSet" msprop:Generator_UserDSName="rpcDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="guinhanlieuke" msprop:Generator_TableClassName="guinhanlieukeDataTable" msprop:Generator_TableVarName="tableguinhanlieuke" msprop:Generator_RowChangedName="guinhanlieukeRowChanged" msprop:Generator_TablePropName="guinhanlieuke" msprop:Generator_RowDeletingName="guinhanlieukeRowDeleting" msprop:Generator_RowChangingName="guinhanlieukeRowChanging" msprop:Generator_RowEvHandlerName="guinhanlieukeRowChangeEventHandler" msprop:Generator_RowDeletedName="guinhanlieukeRowDeleted" msprop:Generator_RowClassName="guinhanlieukeRow" msprop:Generator_UserTableName="guinhanlieuke" msprop:Generator_RowEvArgName="guinhanlieukeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MASO" msprop:Generator_ColumnVarNameInTable="columnMASO" msprop:Generator_ColumnPropNameInRow="MASO" msprop:Generator_ColumnPropNameInTable="MASOColumn" msprop:Generator_UserColumnName="MASO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAYNHANLK" msprop:Generator_ColumnVarNameInTable="columnNGAYNHANLK" msprop:Generator_ColumnPropNameInRow="NGAYNHANLK" msprop:Generator_ColumnPropNameInTable="NGAYNHANLKColumn" msprop:Generator_UserColumnName="NGAYNHANLK">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DotNhan" msprop:Generator_ColumnVarNameInTable="columnDotNhan" msprop:Generator_ColumnPropNameInRow="DotNhan" msprop:Generator_ColumnPropNameInTable="DotNhanColumn" msprop:Generator_UserColumnName="DotNhan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SLNhan" msprop:Generator_ColumnVarNameInTable="columnSLNhan" msprop:Generator_ColumnPropNameInRow="SLNhan" msprop:Generator_ColumnPropNameInTable="SLNhanColumn" msprop:Generator_UserColumnName="SLNhan" type="xs:int" />
+              <xs:element name="DOTPHATTIEP" msprop:Generator_ColumnVarNameInTable="columnDOTPHATTIEP" msprop:Generator_ColumnPropNameInRow="DOTPHATTIEP" msprop:Generator_ColumnPropNameInTable="DOTPHATTIEPColumn" msprop:Generator_UserColumnName="DOTPHATTIEP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SLGui" msprop:Generator_ColumnVarNameInTable="columnSLGui" msprop:Generator_ColumnPropNameInRow="SLGui" msprop:Generator_ColumnPropNameInTable="SLGuiColumn" msprop:Generator_UserColumnName="SLGui" type="xs:int" minOccurs="0" />
+              <xs:element name="NGAYGUILK" msprop:Generator_ColumnVarNameInTable="columnNGAYGUILK" msprop:Generator_ColumnPropNameInRow="NGAYGUILK" msprop:Generator_ColumnPropNameInTable="NGAYGUILKColumn" msprop:Generator_UserColumnName="NGAYGUILK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CHUAN" msprop:Generator_ColumnVarNameInTable="columnCHUAN" msprop:Generator_ColumnPropNameInRow="CHUAN" msprop:Generator_ColumnPropNameInTable="CHUANColumn" msprop:Generator_UserColumnName="CHUAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TENDONVI" msprop:Generator_ColumnVarNameInTable="columnTENDONVI" msprop:Generator_ColumnPropNameInRow="TENDONVI" msprop:Generator_ColumnPropNameInTable="TENDONVIColumn" msprop:Generator_UserColumnName="TENDONVI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TINH" msprop:Generator_ColumnVarNameInTable="columnTINH" msprop:Generator_ColumnPropNameInRow="TINH" msprop:Generator_ColumnPropNameInTable="TINHColumn" msprop:Generator_UserColumnName="TINH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
