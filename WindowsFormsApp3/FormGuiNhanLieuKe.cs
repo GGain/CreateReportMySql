@@ -12,9 +12,9 @@ using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class FormGuiNhanLieuKe : Form
     {
-        public Form1()
+        public FormGuiNhanLieuKe()
         {
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace WindowsFormsApp3
             //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
             reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             //Đường dẫn báo cáo
-            reportViewer1.LocalReport.ReportPath = "Report2.rdlc";
+            reportViewer1.LocalReport.ReportPath = "ReportGuiNhanLieuKe.rdlc";
             //Nếu có dữ liệu
             if (ds.Tables[0].Rows.Count > 0)
             {

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp3
 {
-    partial class Form1
+    partial class FormGuiNhanLieuKe
     {
         /// <summary>
         /// Required designer variable.
