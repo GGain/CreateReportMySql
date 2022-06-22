@@ -31,34 +31,25 @@ namespace WindowsFormsApp3
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.nhapguibuuphamBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rpcDataSet = new WindowsFormsApp3.rpcDataSet();
+            this.DataSetGuiNhanBuuPham = new WindowsFormsApp3.DataSetGuiNhanBuuPham();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimeNgayNhan = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.nhapguibuuphamTableAdapter = new WindowsFormsApp3.rpcDataSetTableAdapters.nhapguibuuphamTableAdapter();
-            this.guinhanlieukeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guinhanlieukeTableAdapter = new WindowsFormsApp3.rpcDataSetTableAdapters.guinhanlieukeTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.nhapguibuuphamBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpcDataSet)).BeginInit();
+            this.nhapguibuuphamTableAdapter = new WindowsFormsApp3.DataSetGuiNhanBuuPhamTableAdapters.nhapguibuuphamTableAdapter();
+            this.nhapguibuuphamBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetGuiNhanBuuPham)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guinhanlieukeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhapguibuuphamBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // nhapguibuuphamBindingSource
+            // DataSetGuiNhanBuuPham
             // 
-            this.nhapguibuuphamBindingSource.DataMember = "nhapguibuupham";
-            this.nhapguibuuphamBindingSource.DataSource = this.rpcDataSet;
-            // 
-            // rpcDataSet
-            // 
-            this.rpcDataSet.DataSetName = "rpcDataSet";
-            this.rpcDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DataSetGuiNhanBuuPham.DataSetName = "DataSetGuiNhanBuuPham";
+            this.DataSetGuiNhanBuuPham.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -112,13 +103,9 @@ namespace WindowsFormsApp3
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.DocumentMapWidth = 81;
-            reportDataSource1.Name = "guiBuuPham";
+            reportDataSource1.Name = "nhapguibuupham";
             reportDataSource1.Value = this.nhapguibuuphamBindingSource;
-            reportDataSource2.Name = "viewGuiNhanLieuKe";
-            reportDataSource2.Value = this.guinhanlieukeBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp3.ReportGuiNhanBPham.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -130,14 +117,10 @@ namespace WindowsFormsApp3
             // 
             this.nhapguibuuphamTableAdapter.ClearBeforeFill = true;
             // 
-            // guinhanlieukeBindingSource
+            // nhapguibuuphamBindingSource
             // 
-            this.guinhanlieukeBindingSource.DataMember = "guinhanlieuke";
-            this.guinhanlieukeBindingSource.DataSource = this.rpcDataSet;
-            // 
-            // guinhanlieukeTableAdapter
-            // 
-            this.guinhanlieukeTableAdapter.ClearBeforeFill = true;
+            this.nhapguibuuphamBindingSource.DataMember = "nhapguibuupham";
+            this.nhapguibuuphamBindingSource.DataSource = this.DataSetGuiNhanBuuPham;
             // 
             // FormGuiNhanBuuPham
             // 
@@ -149,12 +132,11 @@ namespace WindowsFormsApp3
             this.Name = "FormGuiNhanBuuPham";
             this.Text = "FormGuiNhanBuuPham";
             this.Load += new System.EventHandler(this.FormGuiNhanBuuPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nhapguibuuphamBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpcDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetGuiNhanBuuPham)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guinhanlieukeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhapguibuuphamBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,14 +145,12 @@ namespace WindowsFormsApp3
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private rpcDataSet rpcDataSet;
-        private System.Windows.Forms.BindingSource nhapguibuuphamBindingSource;
-        private rpcDataSetTableAdapters.nhapguibuuphamTableAdapter nhapguibuuphamTableAdapter;
         private System.Windows.Forms.DateTimePicker dateTimeNgayNhan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.BindingSource guinhanlieukeBindingSource;
-        private rpcDataSetTableAdapters.guinhanlieukeTableAdapter guinhanlieukeTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSetGuiNhanBuuPham DataSetGuiNhanBuuPham;
+        private DataSetGuiNhanBuuPhamTableAdapters.nhapguibuuphamTableAdapter nhapguibuuphamTableAdapter;
+        private System.Windows.Forms.BindingSource nhapguibuuphamBindingSource;
     }
 }

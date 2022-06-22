@@ -23,19 +23,7 @@ namespace WindowsFormsApp3
 
         private void FormGuiNhanBuuPham_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rpcDataSet.guinhanlieuke' table. You can move, or remove it, as needed.
-            //this.guinhanlieukeTableAdapter.Fill(this.rpcDataSet.guinhanlieuke);
-            // TODO: This line of code loads data into the 'rpcDataSet.nhapguibuupham' table. You can move, or remove it, as needed.
-            //this.nhapguibuuphamTableAdapter.Fill(this.rpcDataSet.nhapguibuupham);
-            // TODO: This line of code loads data into the 'rpcDataSet.guinhanlieuke' table. You can move, or remove it, as needed.
-            //this.guinhanlieukeTableAdapter.Fill(this.rpcDataSet.guinhanlieuke);
-            // TODO: This line of code loads data into the 'rpcDataSet.nhapguibuupham' table. You can move, or remove it, as needed.
-            ///this.nhapguibuuphamTableAdapter.Fill(this.rpcDataSet.nhapguibuupham);
-            // TODO: This line of code loads data into the 'rpcDataSet.guinhanlieuke' table. You can move, or remove it, as needed.
-            //this.guinhanlieukeTableAdapter.Fill(this.rpcDataSet.guinhanlieuke);
-            // TODO: This line of code loads data into the 'rpcDataSet.nhapguibuupham' table. You can move, or remove it, as needed.
-            //this.nhapguibuuphamTableAdapter.Fill(this.rpcDataSet.nhapguibuupham);
-
+            //this.nhapguibuuphamTableAdapter.Fill(this.DataSetGuiNhanBuuPham.nhapguibuupham);
             this.reportViewer1.RefreshReport();
         }
 
@@ -61,21 +49,21 @@ namespace WindowsFormsApp3
             adp.Fill(ds);
 
             //Khai báo chế độ xử lý báo cáo, trong trường hợp này lấy báo cáo ở local
-            reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
+            this.reportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
             //Đường dẫn báo cáo
-            reportViewer1.LocalReport.ReportPath = "ReportGuiNhanBPham.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "ReportGuiNhanBPham.rdlc";
             //Nếu có dữ liệu
             if (ds.Tables[0].Rows.Count > 0)
             {
                 //Tạo nguồn dữ liệu cho báo cáo
                 ReportDataSource rds = new ReportDataSource("nhapguibuupham", ds.Tables[0]);
                 //Xóa dữ liệu của báo cáo cũ trong trường hợp người dùng thực hiện câu truy vấn khác 
-                reportViewer1.LocalReport.DataSources.Clear();
+                this.reportViewer1.LocalReport.DataSources.Clear();
                 //Add dữ liệu vào báo cáo
-                reportViewer1.LocalReport.DataSources.Add(rds);
-                nhapguibuuphamBindingSource.DataSource = rds;
+                this.reportViewer1.LocalReport.DataSources.Add(rds);
+                //nhapguibuuphamBindingSource.DataSource = rds;
                 //Refresh lại báo cáo
-                reportViewer1.RefreshReport();
+                this.reportViewer1.RefreshReport();
             }
             else
             {
