@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.guinhanlieukeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rpcDataSet = new WindowsFormsApp3.rpcDataSet();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,10 +70,10 @@ namespace WindowsFormsApp3
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "viewGuiNhanLieuKe";
-            reportDataSource2.Value = this.guinhanlieukeBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp3.Report2.rdlc";
+            reportDataSource1.Name = "viewGuiNhanLieuKe";
+            reportDataSource1.Value = this.guinhanlieukeBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp3.ReportGuiNhanLieuKe.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 40);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -107,7 +107,7 @@ namespace WindowsFormsApp3
             this.panel1.Size = new System.Drawing.Size(1114, 40);
             this.panel1.TabIndex = 3;
             // 
-            // Form1
+            // FormGuiNhanLieuKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,8 +117,8 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormGuiNhanLieuKe";
+            this.Text = "Report Gửi Nhận Liều Kế";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guinhanlieukeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpcDataSet)).EndInit();
